@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { openDemoModal } from '@/components/openDemoModal'
 
 export default function CTASection() {
   return (
@@ -57,12 +58,7 @@ export default function CTASection() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 items-center"
         >
-          <Link
-            href="#booking"
-            className="bg-[#0AAEDB] hover:bg-[#0074A6] text-white font-semibold text-base px-8 py-4 rounded-lg transition-colors duration-200 flex items-center gap-2 min-w-[220px] justify-center"
-          >
-            Book a Strategy Call <ArrowRight size={18} />
-          </Link>
+          <button onClick={openDemoModal} className="bg-[#0AAEDB] hover:bg-[#0074A6] text-white font-semibold text-base px-8 py-4 rounded-lg transition-colors duration-200 flex items-center gap-2 min-w-[220px] justify-center">Book a Strategy Call <ArrowRight size={18} /></button>
           <Link
             href="#booking"
             className="border border-white/30 hover:border-white text-white font-semibold text-base px-8 py-4 rounded-lg transition-colors duration-200 flex items-center gap-2 min-w-[240px] justify-center"

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import * as Tabs from '@radix-ui/react-tabs'
 import { TrendingUp, Flame, Shield, Building2, BookOpen, Landmark } from 'lucide-react'
+import { openDemoModal } from '@/components/openDemoModal'
 
 const industries = [
   {
@@ -298,12 +299,7 @@ export default function UseCasesSection() {
                               <span className="text-[#10B981] font-bold">Available</span>
                             </div>
                           </div>
-                          <a
-                            href="#booking"
-                            className="mt-4 block text-center text-xs text-[#0AAEDB] hover:underline underline-offset-2"
-                          >
-                            Book a demo for your industry →
-                          </a>
+                          <button onClick={openDemoModal} className="mt-4 block text-center text-xs text-[#0AAEDB] hover:underline underline-offset-2">ok a demo for your industry</button>
                         </div>
                       </div>
                     </motion.div>

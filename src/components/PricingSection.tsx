@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Check, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { openDemoModal } from '@/components/openDemoModal'
+
 
 const saasBenefits = [
   'Read-Only User: $10/seat/month',
@@ -95,12 +97,7 @@ export default function PricingSection() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="#booking"
-              className="w-full bg-[#0AAEDB] hover:bg-[#0074A6] text-white font-semibold text-sm px-6 py-3.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
-            >
-              Book a Demo <ArrowRight size={15} />
-            </Link>
+            <button onClick={openDemoModal} className="w-full bg-[#0AAEDB] hover:bg-[#0074A6] text-white font-semibold text-sm px-6 py-3.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">Book a Demo<ArrowRight size={15} /></button>
           </motion.div>
 
           {/* Perpetual Card */}
@@ -139,12 +136,7 @@ export default function PricingSection() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="#booking"
-              className="w-full border border-white/30 hover:border-white text-white font-semibold text-sm px-6 py-3.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
-            >
-              Talk to Sales <ArrowRight size={15} />
-            </Link>
+            <button onClick={openDemoModal} className="w-full border border-white/30 hover:border-white text-white font-semibold text-sm px-6 py-3.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">Talk to Sales <ArrowRight size={15} /></button>
           </motion.div>
         </div>
 

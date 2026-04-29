@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Globe, Zap } from 'lucide-react'
+import { openDemoModal } from '@/components/openDemoModal'
 
 // ─── Each path string must exactly match the visible SVG line geometry ────────
 
@@ -256,12 +257,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.24 }}
             className="flex flex-col sm:flex-row gap-4 items-center"
           >
-            <Link
-              href="#booking"
-              className="bg-[#0AAEDB] hover:bg-[#0074A6] text-white font-semibold text-base px-7 py-3.5 rounded-lg transition-colors duration-200 min-w-[180px] text-center"
-            >
-              Book a Demo
-            </Link>
+            <button onClick={openDemoModal} className="bg-[#0AAEDB] hover:bg-[#0074A6] text-white font-semibold text-base px-7 py-3.5 rounded-lg transition-colors duration-200 min-w-[180px] text-center">Book a Demo</button>
             <Link
               href="#architecture"
               className="text-[#0D1B2A] font-medium text-base hover:text-[#0AAEDB] transition-colors underline-offset-4 hover:underline"

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { openDemoModal } from '@/components/openDemoModal'
 
 const navLinks = [
   { label: 'Features', href: '#features' },
@@ -60,12 +61,7 @@ export default function Navigation() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center">
-            <Link
-              href="#booking"
-              className="bg-[#0AAEDB] hover:bg-[#0074A6] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
-            >
-              Book a Demo
-            </Link>
+            <button onClick={openDemoModal} className="bg-[#0AAEDB] hover:bg-[#0074A6] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">Book a Demo</button>
           </div>
 
           {/* Mobile */}
@@ -100,13 +96,9 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="#booking"
-                onClick={() => setMobileOpen(false)}
-                className="bg-[#0AAEDB] text-white text-sm font-semibold px-5 py-3 rounded-lg text-center mt-2"
-              >
-                Book a Demo
-              </Link>
+              <button
+                onClick={() => { openDemoModal(); setMobileOpen(false); }}
+                className="bg-[#0AAEDB] text-white text-sm font-semibold px-5 py-3 rounded-lg text-center mt-2">Book a Demo</button>
             </div>
           </motion.div>
         )}
