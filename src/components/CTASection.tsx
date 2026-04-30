@@ -59,12 +59,12 @@ export default function CTASection() {
           className="flex flex-col sm:flex-row gap-4 items-center"
         >
           <button onClick={openDemoModal} className="bg-[#0AAEDB] hover:bg-[#0074A6] text-white font-semibold text-base px-8 py-4 rounded-lg transition-colors duration-200 flex items-center gap-2 min-w-[220px] justify-center">Book a Strategy Call <ArrowRight size={18} /></button>
-          <Link
+          {/* <Link
             href="#booking"
             className="border border-white/30 hover:border-white text-white font-semibold text-base px-8 py-4 rounded-lg transition-colors duration-200 flex items-center gap-2 min-w-[240px] justify-center"
           >
             <Download size={16} /> Download Technical Overview
-          </Link>
+          </Link> */}
         </motion.div>
 
         {/* Footer info */}
