@@ -136,7 +136,7 @@ export default function OctoLangvsDaxSection() {
 
             <div className="space-y-3">
               <p className="text-[#6B7280] text-sm leading-relaxed">
-                OctoLang — Lux Path Expressions — is MPP BI's analytical language. It was designed as
+                OctoLang is MPP BI's analytical language. It was designed as
                 DirectQuery-native from the first line of code. There is no import mode to fall
                 back on. There is no degraded functionality in live connection.
               </p>
